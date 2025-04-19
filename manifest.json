@@ -1,0 +1,23 @@
+{
+  "name": "ACERTOSCLUB",
+  "short_name": "ACERTOS.CLUB",
+  "description": "A Banca de Apostas Mais Confiável e Rentável",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#000000",
+  "theme_color": "#4CAF50",
+  "icons": [
+    {
+      "src": "https://www.acertosclub.net/icons/LotoHack.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://www.acertosclub.net/icons/LotoHack.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
