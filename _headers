@@ -1,0 +1,7 @@
+/* 
+  Add HTTP headers for compression
+  Enabling Brotli and Gzip compression for text files
+*/
+  Content-Encoding: br
+  Content-Encoding: gzip
+  Cache-Control: public, max-age=31536000, immutable
