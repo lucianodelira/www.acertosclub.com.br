@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: blob:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; frame-src *; connect-src *;">
-  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
   <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
   <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
   <meta name="referrer" content="no-referrer" />
@@ -15,13 +14,12 @@
   <meta name="author" content="ACERTOS.CLUB" />
   <meta name="robots" content="index, follow" />
 
-<!-- Open Graph / Facebook -->
-<meta property="og:title" content="ACERTOS.CLUB - A Banca de Apostas Mais Confiável e Rentável" />
-<meta property="og:description" content="Ganhe dinheiro com apostas seguras na ACERTOS.CLUB. Pix rápido e suporte 24h. Jogue agora e maximize seus lucros!" />
-<meta property="og:image" content="https://res.cloudinary.com/dox0ijyes/image/upload/v1746302977/acertos/mina_ca7dtn.webp" />
-<meta property="og:url" content="https://www.acertosclub.com.br" />
-<meta property="og:type" content="website" />
-
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="ACERTOS.CLUB - A Banca de Apostas Mais Confiável e Rentável" />
+  <meta property="og:description" content="Ganhe dinheiro com apostas seguras na ACERTOS.CLUB. Pix rápido e suporte 24h. Jogue agora e maximize seus lucros!" />
+  <meta property="og:image" content="https://res.cloudinary.com/dox0ijyes/image/upload/v1746302977/acertos/mina_ca7dtn.webp" />
+  <meta property="og:url" content="https://www.acertosclub.com.br" />
+  <meta property="og:type" content="website" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -37,7 +35,10 @@
   <link rel="canonical" href="https://www.acertosclub.com.br" />
 
   <!-- Preload do iframe principal -->
-  <link rel="preload" as="document" href="https://app.acertos.club/pr/qcGoRMK0">
+  <link rel="preload" href="https://app.acertos.club/pr/qcGoRMK0" as="iframe" />
+
+  <!-- Carregar fontes do Google corretamente -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bevellier:wght@100;200;300;400;500;600;700;800;900&display=swap" />
 
   <style>
     html, body {
@@ -132,8 +133,6 @@
 </head>
 <body>
 
-
-  
   <script defer>
     (function () {
       if (window.location.hostname === "acertosclub.com.br") {
@@ -142,14 +141,11 @@
     })();
   </script>
 
-
    <div class="container">
     <div class="iframe-container">
       <iframe allow='clipboard-read; clipboard-write' frameborder='0' height='95%' id='embeddedIframe' loading='lazy' sandbox='allow-scripts allow-same-origin' src='https://app.acertos.club/pr/qcGoRMK0' title='Conteúdo interativo do Acertos Club' width='100%'>
 </iframe>
     </div>
-
-
 
     <div class="buttons">
       <a class="button" href="https://github.com/lucianodelira/app.acertos.club/raw/f389362c4a226e7a4d56f474d1346e8ce3ad50d4/ACERTOSCLUB.apk">📲 .APK </a>
@@ -169,11 +165,8 @@
   <!-- Banner de instalação -->
   <div id="install-banner">
     <p style="margin: 0 0 10px;">📲 Instale nosso app para acesso mais rápido e fácil!</p>
-    <button onclick="instalarApp()" style="background: #4CAF50; color: white; border: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; cursor: pointer;">Instalar App
-::contentReference[oaicite:23]{index=23}
- 
-  </button>
-</div>
+    <button onclick="instalarApp()" style="background: #4CAF50; color: white; border: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; cursor: pointer;">Instalar App</button>
+  </div>
 
 <script defer>
   let deferredPrompt;
