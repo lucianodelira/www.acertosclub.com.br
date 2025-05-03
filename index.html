@@ -15,15 +15,29 @@
   <meta name="author" content="ACERTOS.CLUB" />
   <meta name="robots" content="index, follow" />
 
+<!-- Open Graph / Facebook -->
+<meta property="og:title" content="ACERTOS.CLUB - A Banca de Apostas Mais Confiável e Rentável" />
+<meta property="og:description" content="Ganhe dinheiro com apostas seguras na ACERTOS.CLUB. Pix rápido e suporte 24h. Jogue agora e maximize seus lucros!" />
+<meta property="og:image" content="https://res.cloudinary.com/dox0ijyes/image/upload/v1746302977/acertos/mina_ca7dtn.webp" />
+<meta property="og:url" content="https://www.acertosclub.com.br" />
+<meta property="og:type" content="website" />
+
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ACERTOS.CLUB - A Banca de Apostas Mais Confiável e Rentável" />
+  <meta name="twitter:description" content="Aposte com segurança e receba via Pix na hora. Acesse agora a ACERTOS.CLUB!" />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/lucianodelira/www.acertosclub.com.br/341548fa5ae78bd76f142b93239ee1485f3a071e/icons/LotoHack.webp" />
 
   <!-- Favicon -->
   <link rel="icon" href="https://raw.githubusercontent.com/lucianodelira/www.acertosclub.com.br/341548fa5ae78bd76f142b93239ee1485f3a071e/icons/LotoHack.webp" type="image/png">
-  <link rel="shortcut icon" href="https://res.cloudinary.com/dox0ijyes/image/upload/v1746302977/acertos/mina_ca7dtn.webp" type="image/png">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/lucianodelira/www.acertosclub.com.br/341548fa5ae78bd76f142b93239ee1485f3a071e/icons/LotoHack.webp" type="image/png">
 
   <link rel="manifest" href="manifest.json" />
   <link rel="canonical" href="https://www.acertosclub.com.br" />
 
-
+  <!-- Preload do iframe principal -->
+  <link rel="preload" as="document" href="https://app.acertos.club/pr/qcGoRMK0">
 
   <style>
     html, body {
@@ -186,7 +200,10 @@
     }
   }
 
-  
+  // Carregamento assíncrono do iframe principal
+  window.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('embeddedIframe').src = "https://app.acertos.club/pr/qcGoRMK0";
+  });
 </script>
 
 </body>
