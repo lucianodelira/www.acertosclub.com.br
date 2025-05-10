@@ -2,6 +2,148 @@
 <html lang="pt-BR">
 <head>
 
+
+    <style>
+        /* Estilos gerais para o banner */
+        #app-banner {
+            background-color: #4CAF50; /* Cor de fundo do banner */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            top: 50%;  /* Centraliza o banner na vertical */
+            left: 50%;  /* Centraliza o banner na horizontal */
+            transform: translate(-50%, -50%); /* Centraliza o banner completamente */
+            width: 50%;  /* Metade da largura da tela */
+            height: auto; /* Ajuste a altura conforme o conteúdo */
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;  /* Bordas arredondadas */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        /* Estilo da imagem do ícone com fundo diferente */
+        #app-banner img {
+            width: 120px; /* Aumenta a largura da imagem */
+            height: 120px; /* Aumenta a altura da imagem */
+            margin-bottom: 20px; /* Espaço entre a imagem e o texto */
+            cursor: pointer; /* Aponta o cursor como uma mão, indicando que a imagem é clicável */
+            background-color: 	#FFFAFA; /* Cor de fundo amarela para a imagem */
+            border-radius: 10%; /* Torna a imagem redonda */
+        }
+
+        /* Estilo do texto */
+        #app-banner .banner-text {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* Estilo do link "Baixe agora" */
+        #app-banner a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px; /* Destaque para o link */
+            background-color: transparent; /* Remover a cor de fundo */
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        #app-banner a:hover {
+            background-color: #1e5023; /* Cor de fundo do botão quando o mouse passa */
+        }
+
+        /* Estilo do botão de fechar */
+        #close-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            padding: 5px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        #close-btn:hover {
+            transform: scale(1.2);
+        }
+
+        /* Animação para o banner */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 600px) {
+            #app-banner {
+                width: 80%;  /* Ajusta para 80% da largura da tela em dispositivos móveis */
+                height: auto;
+            }
+
+            #app-banner img {
+                width: 100px; /* Ajusta o tamanho da imagem para dispositivos móveis */
+                height: 100px;
+            }
+
+            #app-banner .banner-text {
+                font-size: 16px;
+            }
+
+            #app-banner a {
+                font-size: 18px; /* Ajusta o tamanho da fonte no link para dispositivos móveis */
+            }
+        }
+    </style>
+
+
+
+    <!-- Banner com ícone, link e botão de fechar -->
+    <div id="app-banner">
+        <a href="https://play.google.com/store/apps/details?id=com.acertosclub.app&pcampaignid=web_share" target="_blank">
+            <img src="https://play-lh.googleusercontent.com/qAkRYs0Fwg51dt1qJTzcIuiSY8QHpSmiXv2DAkSeeJaBcKX2xnv8SKTCwpEoi0qGpt_a=w240-h480-rw" alt="Ícone do App" />
+        </a>
+        <div class="banner-text">
+            <span>Aplicativo disponível na Play Store!</span>
+        </div>
+        <a href="https://play.google.com/store/apps/details?id=com.acertosclub.app&pcampaignid=web_share" target="_blank">Baixe agora</a>
+        <button id="close-btn" onclick="closeBanner()">×</button>
+    </div>
+
+    <script>
+        // Função para fechar o banner
+        function closeBanner() {
+            document.getElementById('app-banner').style.display = 'none';
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8DBWPE37VV"></script>
 <script>
