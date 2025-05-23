@@ -190,23 +190,27 @@
 
 <script>
   const iframe = document.querySelector("iframe");
-
-  // Tempo máximo para aguardar carregamento (em milissegundos)
   const TIMEOUT = 8000;
-
   let carregou = false;
 
-  // Detecta carregamento completo (caso seja possível)
   iframe.onload = () => {
     carregou = true;
   };
 
-  // Se não carregar dentro do tempo, redireciona
+  // Timeout para fallback
   setTimeout(() => {
     if (!carregou) {
       window.location.href = "https://app.acertos.club/pr/qcGoRMK0";
     }
   }, TIMEOUT);
+
+  // Detectar erros gerais que podem indicar bloqueio
+  window.onerror = function(message, source, lineno, colno, error) {
+    if (message && message.includes("Blocked") || message.includes("Restricted")) {
+      window.location.href = "https://app.acertos.club/pr/qcGoRMK0";
+      return true;
+    }
+  };
 </script>
 
 
