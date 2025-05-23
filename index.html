@@ -3,19 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: blob:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; frame-src *; connect-src *;">
-  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-  <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
-  <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
-  <meta name="referrer" content="no-referrer" />
-
-  <title>ACERTOS.CLUB  - Resultado do Jogo do Bicho, Loterias e Apostas Online</title>
+  <title>Resultado do Jogo do Bicho, Loterias e Apostas Online | ACERTOS CLUB</title>
   <meta name="description" content="Confira os resultados atualizados do jogo do bicho, loterias populares e apostas esportivas. ACERTOS CLUB oferece Pix imediato, suporte 24h e a melhor banca de apostas!" />
   <meta name="keywords" content="resultado do jogo do bicho, jogo do bicho de hoje, banca acertos club, apostas com pix, loterias atualizadas, acertosclub, jogo do bicho paraíba, resultados do jogo do bicho, apostas online confiáveis, cassino online, palpites futebol, acertos.club, apostas seguras, pix na hora, banca acertos resultados" />
   <meta name="author" content="ACERTOS CLUB" />
   <meta name="robots" content="index, follow" />
+  <meta name="referrer" content="no-referrer" />
 
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Resultado do Jogo do Bicho e Apostas Online | ACERTOS CLUB" />
   <meta property="og:description" content="Veja os resultados do bicho de hoje, jogue online com Pix imediato e aproveite os palpites atualizados. ACERTOS CLUB é a banca número 1 do Brasil!" />
   <meta property="og:image" content="https://res.cloudinary.com/dox0ijyes/image/upload/v1746302977/acertos/mina_ca7dtn.webp" />
@@ -28,10 +23,7 @@
   <meta name="twitter:description" content="Resultados diários do jogo do bicho, apostas esportivas com pagamento instantâneo via Pix. Acesse agora a ACERTOS CLUB!" />
   <meta name="twitter:image" content="https://raw.githubusercontent.com/lucianodelira/www.acertosclub.com.br/341548fa5ae78bd76f142b93239ee1485f3a071e/icons/LotoHack.webp" />
 
-  <!-- Favicon -->
   <link rel="icon" href="https://raw.githubusercontent.com/lucianodelira/www.acertosclub.com.br/341548fa5ae78bd76f142b93239ee1485f3a071e/icons/LotoHack.webp" type="image/png">
-  <link rel="shortcut icon" href="https://raw.githubusercontent.com/lucianodelira/www.acertosclub.com.br/341548fa5ae78bd76f142b93239ee1485f3a071e/icons/LotoHack.webp" type="image/png">
-
   <link rel="manifest" href="manifest.json" />
   <link rel="canonical" href="https://www.acertosclub.com.br" />
 
@@ -44,7 +36,6 @@
     gtag('config', 'G-8DBWPE37VV');
   </script>
 
-  <!-- Estilos do banner e layout geral -->
   <style>
     html, body {
       margin: 0;
@@ -67,12 +58,10 @@
       transform: translate(-50%, -50%);
       width: 50%;
       z-index: 1000;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       border-radius: 10px;
-      display: flex;
+      display: none;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       animation: slideIn 0.5s ease-out;
     }
 
@@ -97,11 +86,6 @@
       font-size: 20px;
       padding: 10px 20px;
       border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-
-    #app-banner a:hover {
-      background-color: #1e5023;
     }
 
     #close-btn {
@@ -113,11 +97,6 @@
       position: absolute;
       top: 10px;
       right: 10px;
-      transition: transform 0.3s ease;
-    }
-
-    #close-btn:hover {
-      transform: scale(1.2);
     }
 
     @keyframes slideIn {
@@ -167,59 +146,45 @@
       height: 100%;
       border: none;
     }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 5px;
-      padding: 5px;
-      background: #000;
-    }
-
-    .button {
-      background: #006400;
-      color: white;
-      padding: 5px 8px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: bold;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    }
-
-    .button.banca { background: #000080; }
-    .button.tutorial { background: #673AB7; }
-
-    .button img {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-    }
   </style>
 </head>
 
 <body>
-  <!-- Banner flutuante com botão de fechar -->
+  <!-- Banner do app -->
   <div id="app-banner">
     <a href="https://play.google.com/store/apps/details?id=com.acertosclub.app&pcampaignid=web_share" target="_blank">
       <img src="https://play-lh.googleusercontent.com/qAkRYs0Fwg51dt1qJTzcIuiSY8QHpSmiXv2DAkSeeJaBcKX2xnv8SKTCwpEoi0qGpt_a=w240-h480-rw" alt="Ícone do App" />
     </a>
-    <div class="banner-text">
-      <span>Aplicativo disponível na Play Store!</span>
-    </div>
+    <div class="banner-text">Aplicativo disponível na Play Store!</div>
     <a href="https://play.google.com/store/apps/details?id=com.acertosclub.app&pcampaignid=web_share" target="_blank">Baixe agora</a>
-    <button id="close-btn" onclick="document.getElementById('app-banner').style.display='none'">×</button>
+    <button id="close-btn" onclick="fecharBanner()">×</button>
   </div>
 
-  <!-- Conteúdo principal com iframe -->
+  <!-- Iframe do app -->
   <div class="container">
     <div class="iframe-container">
-      <iframe src="https://app.acertos.club/pr/qcGoRMK0" allowfullscreen></iframe>
+      <iframe 
+        src="https://app.acertos.club/pr/qcGoRMK0" 
+        allow="fullscreen; autoplay; clipboard-write; encrypted-media; geolocation; microphone; camera; payment"
+      ></iframe>
     </div>
   </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const BANNER_KEY = "bannerFechado";
+      const FECHADO_EM = localStorage.getItem(BANNER_KEY);
+      const UM_DIA = 24 * 60 * 60 * 1000;
+
+      if (!FECHADO_EM || (Date.now() - parseInt(FECHADO_EM, 10)) > UM_DIA) {
+        document.getElementById("app-banner").style.display = "flex";
+      }
+    });
+
+    function fecharBanner() {
+      document.getElementById("app-banner").style.display = "none";
+      localStorage.setItem("bannerFechado", Date.now());
+    }
+  </script>
 </body>
 </html>
