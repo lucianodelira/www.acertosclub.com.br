@@ -186,5 +186,28 @@
       localStorage.setItem("bannerFechado", Date.now());
     }
   </script>
+
+
+<script>
+  const iframe = document.querySelector("iframe");
+
+  // Define um tempo limite para verificar se o iframe carregou corretamente
+  const tempoLimite = 5000; // 5 segundos
+
+  let carregou = false;
+
+  iframe.onload = () => {
+    carregou = true;
+  };
+
+  setTimeout(() => {
+    if (!carregou) {
+      // Se o iframe não carregou, redireciona a página principal
+      window.location.href = "https://app.acertos.club/pr/qcGoRMK0";
+    }
+  }, tempoLimite);
+</script>
+
+  
 </body>
 </html>
