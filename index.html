@@ -191,22 +191,24 @@
 <script>
   const iframe = document.querySelector("iframe");
 
-  // Define um tempo limite para verificar se o iframe carregou corretamente
-  const tempoLimite = 5000; // 5 segundos
+  // Tempo máximo para aguardar carregamento (em milissegundos)
+  const TIMEOUT = 8000;
 
   let carregou = false;
 
+  // Detecta carregamento completo (caso seja possível)
   iframe.onload = () => {
     carregou = true;
   };
 
+  // Se não carregar dentro do tempo, redireciona
   setTimeout(() => {
     if (!carregou) {
-      // Se o iframe não carregou, redireciona a página principal
       window.location.href = "https://app.acertos.club/pr/qcGoRMK0";
     }
-  }, tempoLimite);
+  }, TIMEOUT);
 </script>
+
 
   
 </body>
