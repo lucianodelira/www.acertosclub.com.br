@@ -303,17 +303,242 @@
 
 
     <div class="buttons">
-      <a class="button" href="https://play.google.com/store/apps/details?id=com.acertosclub.app&pcampaignid=web_share">📲Baixar </a>
-      <a class="button banca" href="https://www.feiticeiravip.com.br" target="_blank">
-        <img src="https://raw.githubusercontent.com/lucianodelira/www.acertosclub.com.br/refs/heads/main/icons/minas.webp" alt="Ícone" width="20" height="20" />
-        Feiticeira
-      </a>
-      <a class="button tutorial" href="https://www.feiticeiravip.com" target="_blank" rel="noopener noreferrer">
-        📘 Tutorial
-      </a>
-      <a class="button" style="background: #004d00;" href="https://wa.me/5583993209139?text=Ol%C3%A1%20Promotor%2C%20preciso%20de%20ajuda%20!" target="_blank" rel="noopener noreferrer">
-        💬 Suporte
-      </a>
+          
+
+<style>
+/* Container do menu hambúrguer dentro da faixa preta */
+#menu-hamburguer {
+  background: #000080;
+  color: white;
+  border-radius: 30px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  user-select: none;
+  margin: 5px auto; /* Centraliza horizontalmente */
+  z-index: 10001;
+}
+
+#menu-hamburguer svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  fill: white;
+  transition: transform 0.3s ease;
+}
+
+/* Quando aberto, rotaciona o ícone */
+#menu-hamburguer.open svg {
+  transform: rotate(90deg);
+}
+
+/* Container dos botões, aparece acima do menu */
+.botoes-container {
+  position: absolute;
+  bottom: 50px; /* Posiciona acima do menu */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 14px;
+  z-index: 10000;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+  width: auto;
+  max-width: 95vw;
+}
+
+/* Mostrar container quando aberto */
+.botoes-container.open {
+  max-height: 100px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Botões flutuantes */
+.botao-flutuante {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 22px;
+  width: 55px;
+  height: 55px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.botao-flutuante img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.botao-flutuante:hover {
+  transform: scale(1.1);
+}
+
+#botao-blaze {
+  background-color: #000;
+  border: 2px solid #ff0000;
+  animation: pulse 1.5s infinite;
+  padding: 8px;
+}
+
+#botao-blaze img {
+  width: 120%;
+  height: 120%;
+  object-fit: contain;
+}
+
+#botao-brasil {
+  background-color: #009c3b;
+  border: 2px solid #fedf00;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.6); }
+  70% { box-shadow: 0 0 0 10px rgba(255, 0, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
+}
+
+/* Esconde barra de scroll horizontal */
+.botoes-container::-webkit-scrollbar {
+  display: none;
+}
+
+.botoes-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (max-width: 500px) {
+  #menu-hamburguer {
+    padding: 6px 12px;
+  }
+
+  .botao-flutuante {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+  }
+
+  .botao-flutuante img {
+    width: 80%;
+    height: 80%;
+  }
+
+  .botoes-container {
+    bottom: 45px;
+    padding: 8px 10px;
+  }
+}
+</style>
+
+
+<!-- Menu hambúrguer inferior centralizado -->
+<div id="menu-hamburguer" aria-label="Menu Bancas Parceiras" role="button" tabindex="0">
+  <!-- Ícone hambúrguer SVG -->
+  <svg viewbox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M3 6h18M3 12h18M3 18h18" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  </path></svg>
+  <span>bancas parceiras</span>
+</div>
+
+<!-- Container com os botões, escondido inicialmente -->
+<div class="botoes-container" id="botoes-container">
+  <button id="botao-bola" class="botao-flutuante" title="Brasileirão ⚽">
+
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEipYPTTkFyY_Kz6X4rgvnQn233SS0YmkXcWA0FSwC0a_-Zb7wsReyU1arZiUe0DLqJwxWyBv3Bzx90ytWj_waO3knVSVIFUZvxBm_bfaJ0sxGU8UHAuKiAzFDbij1l8F_P3YX7E3rwqfKve3NS_yCB9234wEf8AGzmHr-vQ0zoutGk9WQhxh0CFRQBtPdgo/s200/4297950.png" alt="botao-bola" />
+  </button>
+
+  
+
+  <button id="botao-tigerclub" class="botao-flutuante" title="Tiger Club">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi2MQAJsSnixWBwPePeepwQaL0qFJdgrQMGvQmgrFk_KV5F4qd4SeG7Hj_Ng9elzVA-K7oxG6-dxevoqa48WIGXfeZ4OIWzbpCVItzlbIeV2VXBvUalfok7MDRV-upu6Ga0RDoG-_74RZRtvlzb8THF_asV1VBH8nsAyTUh-vwEI_3UJu3ZlL422-J_w398/s200/jogar" alt="tigerclub" />
+  </button>
+
+  <button id="botao-feiticeira" class="botao-flutuante" title="Feiticeira VIP">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5PSxoE5NTJam5yGS0MPDUBSqt8o3Ty-BIw33xjuz-b5bW6anh9qzgSROENvoY_3E1tM52C8N0vaDYr07p3KkC_NlgYx9FbxVzf9rDp1mSJwAWmyo7Vc4pzfg4eDFOYephOosYqgnJgSENyUcUlPAynzuflifeLJ5k0lSc_MrnZ_Sa0uNG2X09ATLNSFXf/s320/minas2%20%281%29.png" alt="feiticeira" />
+  </button>
+
+  <button id="botao-acertos" class="botao-flutuante" title="Acertos Club">
+    <img src="https://raw.githubusercontent.com/lucianodelira/ACERTOSCLUB.COM.BR/refs/heads/main/icons/mina.png" alt="acertos" alt="acertos" />
+  </button>
+
+  <button id="botao-brasil" class="botao-flutuante" title="Banca Brasileira">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjrcxu6Uk7T-3p7nOeoaQ3Mm58dCzom7gsosXvXeh3_IHVU0Go837CkD19wjF3HkS3lVA5R0BkvzL1ZpNMpKx3AYcWWPS_Rnu7Pei50meXdIz15Lp0JRoiOK5Zlq8iBPetpXTmyBSVyfZMuz2Incf5HRefwQJpUK0i3aIlljoPIe2po61wvaodTLAZveH5V/s200/bancabrasileira.png" alt="Brasil" />
+  </button>
+</div>
+
+<script>
+  const menu = document.getElementById('menu-hamburguer');
+  const botoesContainer = document.getElementById('botoes-container');
+
+  function toggleMenu() {
+    const aberto = menu.classList.toggle('open');
+    if (aberto) {
+      botoesContainer.classList.add('open');
+    } else {
+      botoesContainer.classList.remove('open');
+    }
+  }
+
+  menu.addEventListener('click', toggleMenu);
+
+  // Permitir abrir/fechar com Enter ou Espaço para acessibilidade
+  menu.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleMenu();
+    }
+  });
+
+  // Eventos dos botões
+  document.getElementById("botao-bola").addEventListener("click", function () {
+    window.location.href = "https://www.brasileirao.site";
+  });
+
+  
+
+  
+
+  document.getElementById("botao-tigerclub").addEventListener("click", function () {
+    window.open("https://app.tigersclub.vip/pr/cmDAwXiS", "_blank");
+  });
+
+  document.getElementById("botao-feiticeira").addEventListener("click", function () {
+    window.open("https://app.feiticeira.vip/pr/PRBJ9rmd", "_blank");
+  });
+
+  document.getElementById("botao-acertos").addEventListener("click", function () {
+    window.open("https://app.acertos.club/pr/sbrqjugZ", "_blank");
+  });
+
+  document.getElementById("botao-brasil").addEventListener("click", function () {
+    window.open("https://www.bancabrasileira.net", "_blank");
+  });
+</script>
+
+
     </div>
   </div>
 
