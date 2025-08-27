@@ -668,6 +668,61 @@ document.getElementById("whatzap").addEventListener("click", function () {
 </script>
 
 
+
+
+
+<!-- Banner WhatsApp -->
+<div id="whatsapp-banner" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
+    background:rgba(0,0,0,0.7); z-index:9999; justify-content:center; align-items:center;"
+    onclick="fecharWhatsBanner()">
+
+  <div style="background:#fff; padding:20px; border-radius:15px; text-align:center; max-width:320px; position:relative;"
+       onclick="event.stopPropagation()"> <!-- impede fechar ao clicar dentro -->
+    
+    <!-- Botão Fechar -->
+    <button onclick="fecharWhatsBanner()" style="position:absolute; top:10px; right:10px; font-size:20px; font-weight:bold; background:red; color:#fff; border:none; border-radius:50%; width:35px; height:35px; cursor:pointer;">
+      ×
+    </button>
+    
+    <!-- Conteúdo -->
+    <h2 style="color:#25D366; font-family:sans-serif;">Entre no nosso grupo de palpites!</h2>
+    
+    <!-- Botão WhatsApp -->
+    <a href="https://chat.whatsapp.com/LNCfPg5M7au7DGl1tLG5Y6?mode=ac_t" target="_blank" 
+       onclick="fecharWhatsBanner(); window.open(this.href,'_blank'); return false;" 
+       style="display:inline-flex; align-items:center; background:#25D366; color:#fff; padding:12px 20px; border-radius:10px; text-decoration:none; font-size:18px; font-weight:bold; margin-top:15px;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+ alt="WhatsApp" style="width:24px; height:24px; margin-right:10px;" />
+      WhatsApp Entrar
+    </a>
+  </div>
+</div>
+
+<script>
+  // Função exclusiva para fechar só esse banner
+  function fecharWhatsBanner() {
+    document.getElementById("whatsapp-banner").style.display = "none";
+  }
+
+  // Função para verificar se já foi exibido hoje
+  function podeMostrarWhatsBanner() {
+    const hoje = new Date().toISOString().split('T')[0]; // formato AAAA-MM-DD
+    const ultimoDia = localStorage.getItem("whatsBannerDia");
+    return ultimoDia !== hoje;
+  }
+
+  // Exibir banner depois de 5 segundos (5000 ms), se não exibiu hoje
+  setTimeout(() => {
+    if (podeMostrarWhatsBanner()) {
+      document.getElementById("whatsapp-banner").style.display = "flex";
+      localStorage.setItem("whatsBannerDia", new Date().toISOString().split('T')[0]);
+    }
+  }, 5000);
+</script>
+
+
+    
     
 </body>
 </html>
+
