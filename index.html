@@ -1,179 +1,41 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-
-
-    <meta charset="UTF-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: blob:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; frame-src *; connect-src *;">
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
   <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
   <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
   <meta name="referrer" content="no-referrer" />
-
   <title>Resultado do Jogo do Bicho, Loterias e Apostas Online | ACERTOS CLUB</title>
   <meta name="description" content="Confira os resultados atualizados do jogo do bicho, loterias populares e apostas esportivas. ACERTOS CLUB oferece Pix imediato, suporte 24h e a melhor banca de apostas!" />
   <meta name="keywords" content="resultado do jogo do bicho, jogo do bicho de hoje, banca acertos club, apostas com pix, loterias atualizadas, acertosclub, jogo do bicho paraíba, resultados do jogo do bicho, apostas online confiáveis, cassino online, palpites futebol, acertos.club, apostas seguras, pix na hora, banca acertos resultados" />
   <meta name="author" content="ACERTOS CLUB" />
   <meta name="robots" content="index, follow" />
-
-  <!-- Open Graph / Facebook -->
   <meta property="og:title" content="Resultado do Jogo do Bicho e Apostas Online | ACERTOS CLUB" />
   <meta property="og:description" content="Veja os resultados do bicho de hoje, jogue online com Pix imediato e aproveite os palpites atualizados. ACERTOS CLUB é a banca número 1 do Brasil!" />
   <meta property="og:image" content="https://res.cloudinary.com/dox0ijyes/image/upload/v1746302977/acertos/mina_ca7dtn.webp" />
   <meta property="og:url" content="https://www.acertosclub.com.br" />
   <meta property="og:type" content="website" />
-
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Apostas Online e Resultados do Bicho Atualizados | ACERTOS CLUB" />
   <meta name="twitter:description" content="Resultados diários do jogo do bicho, apostas esportivas com pagamento instantâneo via Pix. Acesse agora a ACERTOS CLUB!" />
   <meta name="twitter:image" content="https://raw.githubusercontent.com/lucianodelira/www.acertosclub.com.br/341548fa5ae78bd76f142b93239ee1485f3a071e/icons/LotoHack.webp" />
-
-  <!-- Favicon -->
   <link rel="icon" href="https://raw.githubusercontent.com/lucianodelira/www.acertosclub.com.br/341548fa5ae78bd76f142b93239ee1485f3a071e/icons/LotoHack.webp" type="image/png">
   <link rel="shortcut icon" href="https://raw.githubusercontent.com/lucianodelira/www.acertosclub.com.br/341548fa5ae78bd76f142b93239ee1485f3a071e/icons/LotoHack.webp" type="image/png">
-
   <link rel="manifest" href="manifest.json" />
   <link rel="canonical" href="https://www.acertosclub.com.br" />
-
-    <style>
-        /* Estilos gerais para o banner */
-        #app-banner {
-            background-color: #4CAF50; /* Cor de fundo do banner */
-            color: white;
-            padding: 20px;
-            text-align: center;
-            position: fixed;
-            top: 50%;  /* Centraliza o banner na vertical */
-            left: 50%;  /* Centraliza o banner na horizontal */
-            transform: translate(-50%, -50%); /* Centraliza o banner completamente */
-            width: 50%;  /* Metade da largura da tela */
-            height: auto; /* Ajuste a altura conforme o conteúdo */
-            z-index: 1000;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;  /* Bordas arredondadas */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            animation: slideIn 0.5s ease-out;
-        }
-
-        /* Estilo da imagem do ícone com fundo diferente */
-        #app-banner img {
-            width: 120px; /* Aumenta a largura da imagem */
-            height: 120px; /* Aumenta a altura da imagem */
-            margin-bottom: 20px; /* Espaço entre a imagem e o texto */
-            cursor: pointer; /* Aponta o cursor como uma mão, indicando que a imagem é clicável */
-            background-color: 	#FFFAFA; /* Cor de fundo amarela para a imagem */
-            border-radius: 10%; /* Torna a imagem redonda */
-        }
-
-        /* Estilo do texto */
-        #app-banner .banner-text {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        /* Estilo do link "Baixe agora" */
-        #app-banner a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 20px; /* Destaque para o link */
-            background-color: transparent; /* Remover a cor de fundo */
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        #app-banner a:hover {
-            background-color: #1e5023; /* Cor de fundo do botão quando o mouse passa */
-        }
-
-        /* Estilo do botão de fechar */
-        #close-btn {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 30px;
-            cursor: pointer;
-            padding: 5px;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        #close-btn:hover {
-            transform: scale(1.2);
-        }
-
-        /* Animação para o banner */
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translate(-50%, -50%) scale(0.5);
-            }
-            to {
-                opacity: 1;
-                transform: translate(-50%, -50%) scale(1);
-            }
-        }
-
-        /* Responsividade para telas menores */
-        @media (max-width: 600px) {
-            #app-banner {
-                width: 80%;  /* Ajusta para 80% da largura da tela em dispositivos móveis */
-                height: auto;
-            }
-
-            #app-banner img {
-                width: 100px; /* Ajusta o tamanho da imagem para dispositivos móveis */
-                height: 100px;
-            }
-
-            #app-banner .banner-text {
-                font-size: 16px;
-            }
-
-            #app-banner a {
-                font-size: 18px; /* Ajusta o tamanho da fonte no link para dispositivos móveis */
-            }
-        }
-    </style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8DBWPE37VV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-8DBWPE37VV');
-</script>
-
-
-
-  <!-- Preload do iframe principal -->
   <link rel="preload" as="document" href="https://app.acertos.club/pr/qcGoRMK0">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8DBWPE37VV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8DBWPE37VV');
+  </script>
 
   <style>
     html, body {
@@ -182,77 +44,226 @@
       height: 100%;
       overflow: hidden;
       background: #000;
-      font-family: system-ui, sans-serif;
+      font-family: system-ui, Arial, sans-serif;
       color: #fff;
     }
-    .container {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
+
+    /* Iframe ocupa tudo menos a faixa de 48px */
+    #embeddedIframe {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 48px;
       width: 100%;
+      height: calc(100vh - 48px);
+      height: calc(100dvh - 48px);
+      border: 0;
+      z-index: 1;
     }
-    .iframe-container {
+
+    /* ===== FAIXA INFERIOR: SUPORTE + BANCAS ===== */
+    #bottomBar {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 48px;
+      z-index: 10000;
+      background: #0d0d0d;
+      border-top: 1px solid #222;
+      display: flex;
+      align-items: stretch;
+      padding: 0 8px calc(env(safe-area-inset-bottom, 0px));
+      box-sizing: border-box;
+    }
+
+    /* Lado esquerdo: SUPORTE */
+    #supportHandle {
       flex: 1;
-      width: 100%;
-    }
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-    .buttons {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 5px;
-      padding: 5px;
-      background: #000;
+      align-items: center;
+      gap: 8px;
+      padding: 0 10px;
+      cursor: grab;
+      user-select: none;
+      -webkit-user-select: none;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .3px;
+      min-width: 0;
     }
-    .button {
-      background: #006400;
-      color: white;
-      padding: 5px 8px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: bold;
+    #supportHandle:active { cursor: grabbing; }
+    #supportHandle .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 6px rgba(34, 197, 94, .7);
+      flex-shrink: 0;
+    }
+    #supportHandle .arrow { font-size: 11px; opacity: .9; flex-shrink: 0; }
+    #supportHandle .label {
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      white-space: nowrap;
+    }
+    #supportHandle .hint {
+      font-size: 11px;
+      font-weight: 500;
+      opacity: .5;
+      margin-left: auto;
+      white-space: nowrap;
+    }
+
+    /* Painel de suporte expandido */
+    #supportSheet {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 48px;
+      z-index: 9999;
+      background: #111;
+      border-top: 1px solid #222;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height .25s ease, opacity .2s ease;
+      pointer-events: none;
+    }
+    #supportSheet.open {
+      max-height: 120px;
+      opacity: 1;
+      pointer-events: auto;
+    }
+    #supportContent {
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #supportLink {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 160px;
+      padding: 12px 22px;
+      border-radius: 24px;
+      background: #25D366;
+      color: #082b16;
       text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    /* Lado direito: MENU BANCAS */
+    #menu-hamburguer {
       display: flex;
       align-items: center;
       gap: 6px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    }
-    .button.banca {
       background: #000080;
+      color: white;
+      border-radius: 24px;
+      padding: 6px 12px;
+      margin: 8px 4px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+      user-select: none;
+      flex-shrink: 0;
+      white-space: nowrap;
     }
-    .button.tutorial {
-      background: #673AB7;
+    #menu-hamburguer svg {
+      width: 18px;
+      height: 18px;
+      fill: white;
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
     }
-    .button img {
-      width: 20px;
-      height: 20px;
+    #menu-hamburguer.open svg { transform: rotate(90deg); }
+
+    /* Container dos botões de bancas (abre para cima) */
+    .botoes-container {
+      position: fixed;
+      bottom: 56px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px 12px;
+      background: rgba(0, 0, 0, 0.88);
+      border-radius: 14px;
+      z-index: 10001;
+      transition: max-height 0.35s ease, opacity 0.3s ease;
+      max-height: 0;
+      opacity: 0;
+      pointer-events: none;
+      max-width: 95vw;
+    }
+    .botoes-container.open {
+      max-height: 100px;
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .botoes-container::-webkit-scrollbar { display: none; }
+    .botoes-container { -ms-overflow-style: none; scrollbar-width: none; }
+
+    .botao-flutuante {
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
       border-radius: 50%;
+      width: 52px;
+      height: 52px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 0;
+      flex-shrink: 0;
+    }
+    .botao-flutuante img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .botao-flutuante:hover { transform: scale(1.1); }
+    #botao-blaze {
+      background-color: #000;
+      border: 2px solid #ff0000;
+      animation: pulse 1.5s infinite;
+      padding: 8px;
+    }
+    #botao-blaze img { width: 120%; height: 120%; object-fit: contain; }
+    #botao-brasil {
+      background-color: #009c3b;
+      border: 2px solid #fedf00;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.6); }
+      70% { box-shadow: 0 0 0 10px rgba(255, 0, 0, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
     }
 
-    /* Estilo básico para evitar CLS */
-    .logo-container img {
-      width: 256px;
-      height: 170px;
-      object-fit: contain;
-      display: block;
+    @media (max-width: 500px) {
+      #supportHandle .hint { display: none; }
+      #menu-hamburguer { padding: 5px 10px; font-size: 11px; }
+      .botao-flutuante { width: 46px; height: 46px; }
+      .botoes-container { bottom: 52px; padding: 8px 10px; }
     }
 
-    .content-container {
-      min-height: 300px; /* Reserve espaço visível enquanto carrega */
-    }
-
-    .button-container {
-      min-height: 60px; /* Evita deslocamento ao carregar botões */
-    }
-
+    /* Install banner */
     #install-banner {
       display: none;
       position: fixed;
-      bottom: 20px;
+      bottom: 60px;
       left: 20px;
       right: 20px;
       background: #111;
@@ -260,15 +271,130 @@
       padding: 16px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.6);
+      z-index: 9998;
+      text-align: center;
+    }
+
+    /* Tiger banner */
+    #tiger-banner {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       z-index: 9999;
       text-align: center;
-      min-height: 100px; /* Evita deslocamento ao aparecer */
+      background: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+      border-radius: 12px;
+      max-width: 90vw;
+    }
+    #tiger-banner img {
+      width: 70vw;
+      max-width: 500px;
+      height: auto;
+      cursor: pointer;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    }
+    #close-tiger-banner {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: #ff4444;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    /* WhatsApp banner */
+    #whats-banner {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 380px;
+      max-width: calc(100% - 30px);
+      padding: 35px 25px 28px;
+      background: radial-gradient(circle at top, #123c28 0%, #111 45%, #080808 100%);
+      border: 2px solid #25D366;
+      border-radius: 22px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      z-index: 999999;
+      box-shadow: 0 0 15px rgba(37,211,102,.7), 0 0 40px rgba(37,211,102,.4), 0 15px 50px rgba(0,0,0,.8);
+      animation: bannerEntrada .5s ease, bannerBrilho 2s infinite;
+    }
+    @keyframes bannerEntrada {
+      from { opacity: 0; transform: translate(-50%, -45%) scale(.8); }
+      to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    }
+    @keyframes bannerBrilho {
+      0%, 100% { box-shadow: 0 0 15px rgba(37,211,102,.6), 0 0 40px rgba(37,211,102,.3), 0 15px 50px rgba(0,0,0,.8); }
+      50% { box-shadow: 0 0 25px rgba(37,211,102,1), 0 0 60px rgba(37,211,102,.55), 0 15px 50px rgba(0,0,0,.8); }
+    }
+    .whats-fechar {
+      position: absolute; top: 10px; right: 10px; width: 35px; height: 35px;
+      border: 0; border-radius: 50%; background: #ff1744; color: #fff;
+      font-size: 25px; font-weight: bold; line-height: 35px; cursor: pointer;
+      box-shadow: 0 0 12px rgba(255,23,68,.6); transition: .2s;
+    }
+    .whats-fechar:hover { transform: scale(1.12); background: #ff0033; }
+    .whats-icon-top {
+      width: 75px; height: 75px; margin: 0 auto 12px; border-radius: 50%;
+      background: #25D366; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 0 15px #25D366, 0 0 35px rgba(37,211,102,.6);
+      animation: iconPulse 1.5s infinite;
+    }
+    .whats-icon-top img { width: 48px; height: 48px; }
+    @keyframes iconPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+    #whats-banner h2 {
+      margin: 8px 0 10px; color: #25D366; font-size: 23px; font-weight: 900;
+      text-shadow: 0 0 8px rgba(37,211,102,.8);
+    }
+    #whats-banner p { margin: 0; color: #ddd; font-size: 14px; line-height: 1.5; }
+    .whats-button {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      width: 100%; box-sizing: border-box; margin-top: 20px; padding: 16px 15px;
+      background: linear-gradient(45deg, #00c853, #25D366, #00e676);
+      color: #fff; border-radius: 14px; text-decoration: none;
+      font-size: 17px; font-weight: 900; letter-spacing: .3px;
+      box-shadow: 0 5px 20px rgba(37,211,102,.5);
+      animation: buttonPulse 1.8s infinite; transition: .2s;
+    }
+    .whats-button img { width: 30px; height: 30px; }
+    .whats-button:hover {
+      transform: scale(1.04);
+      box-shadow: 0 0 20px rgba(37,211,102,1), 0 0 40px rgba(37,211,102,.5);
+    }
+    @keyframes buttonPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.025); }
+    }
+    .whats-rodape { margin-top: 14px; color: #25D366; font-size: 12px; font-weight: bold; }
+    .whats-banner-fechando {
+      opacity: 0 !important;
+      transform: translate(-50%, -50%) scale(.8) !important;
+      transition: .25s ease;
+    }
+    @media (max-width: 480px) {
+      #whats-banner { width: 330px; padding: 30px 20px 23px; }
+      #whats-banner h2 { font-size: 20px; }
+      #whats-banner p { font-size: 13px; }
+      .whats-button { font-size: 15px; padding: 15px 10px; }
     }
   </style>
 </head>
 <body>
-
-  <!-- Dados estruturados para SEO local e organização -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -282,9 +408,6 @@
     ]
   }
   </script>
-
-
-
   <script defer>
     (function () {
       if (window.location.hostname === "acertosclub.com.br") {
@@ -293,906 +416,205 @@
     })();
   </script>
 
-
-   <div class="container">
-    <div class="iframe-container">
-      <iframe
+  <!-- IFRAME PRINCIPAL -->
+  <iframe
     id="embeddedIframe"
     src="https://app.acertos.club/pr/qcGoRMK0"
     title="Conteúdo interativo do Acertos Club"
     width="100%"
-    height="95%"
     frameborder="0"
     loading="lazy"
     allow="clipboard-read; clipboard-write; fullscreen"
-></iframe>
-    </div>
+  ></iframe>
 
-
-
-    <div class="buttons">
-          
-
-<style>
-/* Container do menu hambúrguer dentro da faixa preta */
-#menu-hamburguer {
-  background: #000080;
-  color: white;
-  border-radius: 30px;
-  padding: 8px 16px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  font-family: Arial, sans-serif;
-  font-weight: bold;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  user-select: none;
-  margin: 5px auto; /* Centraliza horizontalmente */
-  z-index: 10001;
-}
-
-#menu-hamburguer svg {
-  width: 24px;
-  height: 24px;
-  margin-right: 8px;
-  fill: white;
-  transition: transform 0.3s ease;
-}
-
-/* Quando aberto, rotaciona o ícone */
-#menu-hamburguer.open svg {
-  transform: rotate(90deg);
-}
-
-/* Container dos botões, aparece acima do menu */
-.botoes-container {
-  position: absolute;
-  bottom: 50px; /* Posiciona acima do menu */
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  justify-content: center;
-  gap: 10px;
-  padding: 10px 12px;
-  background: rgba(0, 0, 0, 0.8);
-  border-radius: 14px;
-  z-index: 10000;
-  transition: max-height 0.4s ease, opacity 0.4s ease;
-  max-height: 0;
-  opacity: 0;
-  pointer-events: none;
-  width: auto;
-  max-width: 95vw;
-}
-
-/* Mostrar container quando aberto */
-.botoes-container.open {
-  max-height: 100px;
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Botões flutuantes */
-.botao-flutuante {
-  background-color: #ff4d4d;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  font-size: 22px;
-  width: 55px;
-  height: 55px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  padding: 0;
-  flex-shrink: 0;
-}
-
-.botao-flutuante img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.botao-flutuante:hover {
-  transform: scale(1.1);
-}
-
-#botao-blaze {
-  background-color: #000;
-  border: 2px solid #ff0000;
-  animation: pulse 1.5s infinite;
-  padding: 8px;
-}
-
-#botao-blaze img {
-  width: 120%;
-  height: 120%;
-  object-fit: contain;
-}
-
-#botao-brasil {
-  background-color: #009c3b;
-  border: 2px solid #fedf00;
-}
-
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.6); }
-  70% { box-shadow: 0 0 0 10px rgba(255, 0, 0, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
-}
-
-/* Esconde barra de scroll horizontal */
-.botoes-container::-webkit-scrollbar {
-  display: none;
-}
-
-.botoes-container {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-@media (max-width: 500px) {
-  #menu-hamburguer {
-    padding: 6px 12px;
-  }
-
-  .botao-flutuante {
-    width: 48px;
-    height: 48px;
-    font-size: 18px;
-  }
-
-  .botao-flutuante img {
-    width: 80%;
-    height: 80%;
-  }
-
-  .botoes-container {
-    bottom: 45px;
-    padding: 8px 10px;
-  }
-}
-</style>
-
-
-<!-- Menu hambúrguer inferior centralizado -->
-<div id="menu-hamburguer" aria-label="Menu Bancas Parceiras" role="button" tabindex="0">
-  <!-- Ícone hambúrguer SVG -->
-  <svg viewbox="0 0 24 24" aria-hidden="true" focusable="false">
-    <path d="M3 6h18M3 12h18M3 18h18" stroke="white" stroke-width="2" stroke-linecap="round"/>
-  </path></svg>
-  <span>bancas parceiras</span>
-</div>
-
-<!-- Container com os botões, escondido inicialmente -->
-<div class="botoes-container" id="botoes-container">
-  <button id="botao-bola" class="botao-flutuante" title="Brasileirão ⚽">
-
-  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEipYPTTkFyY_Kz6X4rgvnQn233SS0YmkXcWA0FSwC0a_-Zb7wsReyU1arZiUe0DLqJwxWyBv3Bzx90ytWj_waO3knVSVIFUZvxBm_bfaJ0sxGU8UHAuKiAzFDbij1l8F_P3YX7E3rwqfKve3NS_yCB9234wEf8AGzmHr-vQ0zoutGk9WQhxh0CFRQBtPdgo/s200/4297950.png" alt="botao-bola" />
-  </button>
-
-  
-
-  <button id="botao-tigerclub" class="botao-flutuante" title="Tiger Club">
-    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi2MQAJsSnixWBwPePeepwQaL0qFJdgrQMGvQmgrFk_KV5F4qd4SeG7Hj_Ng9elzVA-K7oxG6-dxevoqa48WIGXfeZ4OIWzbpCVItzlbIeV2VXBvUalfok7MDRV-upu6Ga0RDoG-_74RZRtvlzb8THF_asV1VBH8nsAyTUh-vwEI_3UJu3ZlL422-J_w398/s200/jogar" alt="tigerclub" />
-  </button>
-
-  <button id="botao-feiticeira" class="botao-flutuante" title="Feiticeira VIP">
-    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5PSxoE5NTJam5yGS0MPDUBSqt8o3Ty-BIw33xjuz-b5bW6anh9qzgSROENvoY_3E1tM52C8N0vaDYr07p3KkC_NlgYx9FbxVzf9rDp1mSJwAWmyo7Vc4pzfg4eDFOYephOosYqgnJgSENyUcUlPAynzuflifeLJ5k0lSc_MrnZ_Sa0uNG2X09ATLNSFXf/s320/minas2%20%281%29.png" alt="feiticeira" />
-  </button>
-
-  <button id="botao-acertos" class="botao-flutuante" title="Acertos Club">
-    <img src="https://raw.githubusercontent.com/lucianodelira/ACERTOSCLUB.COM.BR/refs/heads/main/icons/mina.png" alt="acertos" alt="acertos" />
-  </button>
-
-  <button id="botao-brasil" class="botao-flutuante" title="Banca Brasileira">
-    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjrcxu6Uk7T-3p7nOeoaQ3Mm58dCzom7gsosXvXeh3_IHVU0Go837CkD19wjF3HkS3lVA5R0BkvzL1ZpNMpKx3AYcWWPS_Rnu7Pei50meXdIz15Lp0JRoiOK5Zlq8iBPetpXTmyBSVyfZMuz2Incf5HRefwQJpUK0i3aIlljoPIe2po61wvaodTLAZveH5V/s200/bancabrasileira.png" alt="Brasil" />
-  </button>
-
-<button id="whatzap" class="botao-flutuante" title="whatzap">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Brasil" />
-  </button>
-
-
-
-
-</div>
-
-<script>
-  const menu = document.getElementById('menu-hamburguer');
-  const botoesContainer = document.getElementById('botoes-container');
-
-  function toggleMenu() {
-    const aberto = menu.classList.toggle('open');
-    if (aberto) {
-      botoesContainer.classList.add('open');
-    } else {
-      botoesContainer.classList.remove('open');
-    }
-  }
-
-  menu.addEventListener('click', toggleMenu);
-
-  // Permitir abrir/fechar com Enter ou Espaço para acessibilidade
-  menu.addEventListener('keydown', e => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      toggleMenu();
-    }
-  });
-
-  // Eventos dos botões
-  document.getElementById("botao-bola").addEventListener("click", function () {
-    window.location.href = "https://www.brasileirao.site";
-  });
-
-  
-
-  
-
-  document.getElementById("botao-tigerclub").addEventListener("click", function () {
-    window.open("https://WWW.TIGERSCLUB.NET", "_blank");
-  });
-
-  document.getElementById("botao-feiticeira").addEventListener("click", function () {
-    window.open("https://www.feiticeiravip.com.br", "_blank");
-  });
-
-  document.getElementById("botao-acertos").addEventListener("click", function () {
-    window.open("https://app.acertos.online/pr/sbrqjugZ", "_blank");
-  });
-
-  document.getElementById("botao-brasil").addEventListener("click", function () {
-    window.open("https://www.bancabrasileira.net", "_blank");
-  });
-
-
-document.getElementById("whatzap").addEventListener("click", function () {
-    window.open("https://www.salvadorloterias.com", "_blank");
-  });
-
-</script>
-
-
+  <!-- Painel suporte (expande para cima) -->
+  <div id="supportSheet" aria-hidden="true">
+    <div id="supportContent">
+      <a id="supportLink" href="https://www.salvadorloterias.com" target="_blank" rel="noopener noreferrer">Acessar suporte</a>
     </div>
   </div>
 
-  <!-- Banner de instalação -->
+  <!-- FAIXA INFERIOR: SUPORTE + BANCAS -->
+  <div id="bottomBar">
+    <div id="supportHandle" role="button" tabindex="0" aria-expanded="false" aria-controls="supportSheet">
+      <span class="arrow" aria-hidden="true">&#9650;</span>
+      <span class="dot" aria-hidden="true"></span>
+      <span class="label">SUPORTE</span>
+      <span class="hint">Arraste para cima</span>
+    </div>
+
+    <div id="menu-hamburguer" aria-label="Menu Bancas Parceiras" role="button" tabindex="0">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M3 6h18M3 12h18M3 18h18" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span>bancas</span>
+    </div>
+  </div>
+
+  <!-- Container botões bancas (abre para cima) -->
+  <div class="botoes-container" id="botoes-container">
+    <button id="botao-bola" class="botao-flutuante" title="Brasileirão">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEipYPTTkFyY_Kz6X4rgvnQn233SS0YmkXcWA0FSwC0a_-Zb7wsReyU1arZiUe0DLqJwxWyBv3Bzx90ytWj_waO3knVSVIFUZvxBm_bfaJ0sxGU8UHAuKiAzFDbij1l8F_P3YX7E3rwqfKve3NS_yCB9234wEf8AGzmHr-vQ0zoutGk9WQhxh0CFRQBtPdgo/s200/4297950.png" alt="Brasileirão" />
+    </button>
+    <button id="botao-tigerclub" class="botao-flutuante" title="Tiger Club">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi2MQAJsSnixWBwPePeepwQaL0qFJdgrQMGvQmgrFk_KV5F4qd4SeG7Hj_Ng9elzVA-K7oxG6-dxevoqa48WIGXfeZ4OIWzbpCVItzlbIeV2VXBvUalfok7MDRV-upu6Ga0RDoG-_74RZRtvlzb8THF_asV1VBH8nsAyTUh-vwEI_3UJu3ZlL422-J_w398/s200/jogar" alt="Tiger Club" />
+    </button>
+    <button id="botao-feiticeira" class="botao-flutuante" title="Feiticeira VIP">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5PSxoE5NTJam5yGS0MPDUBSqt8o3Ty-BIw33xjuz-b5bW6anh9qzgSROENvoY_3E1tM52C8N0vaDYr07p3KkC_NlgYx9FbxVzf9rDp1mSJwAWmyo7Vc4pzfg4eDFOYephOosYqgnJgSENyUcUlPAynzuflifeLJ5k0lSc_MrnZ_Sa0uNG2X09ATLNSFXf/s320/minas2%20%281%29.png" alt="Feiticeira" />
+    </button>
+    <button id="botao-acertos" class="botao-flutuante" title="Acertos Club">
+      <img src="https://raw.githubusercontent.com/lucianodelira/ACERTOSCLUB.COM.BR/refs/heads/main/icons/mina.png" alt="Acertos" />
+    </button>
+    <button id="botao-brasil" class="botao-flutuante" title="Banca Brasileira">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjrcxu6Uk7T-3p7nOeoaQ3Mm58dCzom7gsosXvXeh3_IHVU0Go837CkD19wjF3HkS3lVA5R0BkvzL1ZpNMpKx3AYcWWPS_Rnu7Pei50meXdIz15Lp0JRoiOK5Zlq8iBPetpXTmyBSVyfZMuz2Incf5HRefwQJpUK0i3aIlljoPIe2po61wvaodTLAZveH5V/s200/bancabrasileira.png" alt="Brasil" />
+    </button>
+    <button id="whatzap" class="botao-flutuante" title="WhatsApp">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+    </button>
+  </div>
+
+  <!-- Banner instalação app -->
   <div id="install-banner">
     <p style="margin: 0 0 10px;">📲 Instale nosso app para acesso mais rápido e fácil!</p>
-    <button onclick="instalarApp()" style="background: #4CAF50; color: white; border: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; cursor: pointer;">Instalar App
+    <button onclick="instalarApp()" style="background: #4CAF50; color: white; border: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; cursor: pointer;">Instalar App</button>
+  </div>
 
-  </button>
-</div>
+  <!-- Banner TigerClub -->
+  <div id="tiger-banner">
+    <button id="close-tiger-banner" type="button">&times;</button>
+    <a href="https://app.superacertos.club/pr/DiNatQPp" target="_blank" rel="noopener">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJsia9fV48VQtpMvb39dsm1j7NTzvlYw7Q0-K3nnTn4UXH_OKv6QZ28y6pA4eIp4CIBmFTwkX-ZZ26W65Upll8X4EE2gaHXVw4ryex-zYgFJqF7cGkMfLKJcgbyy3yTJu4D2p_Lv-FA0YSVMSf-jNDTd5FhSpsY29_y78D7AsFYqLtbq2Sa_EFW47x9H3a/s1024/1781963515978.png" alt="Promoção Tiger Club" />
+    </a>
+  </div>
 
-<script defer>
+  <!-- Banner WhatsApp grupo -->
+  <div id="whats-banner">
+    <button onclick="fecharWhatsBanner()" class="whats-fechar" aria-label="Fechar banner" type="button">×</button>
+    <div class="whats-icon-top">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </div>
+    <h2>🔥 ENTRE NO GRUPO DE PALPITES!</h2>
+    <p>Receba palpites, informações e novidades<br>diretamente no seu WhatsApp.</p>
+    <a href="https://chat.whatsapp.com/KokcnW2aftNGVBjdELZRZK?s=cl&amp;p=a&amp;mlu=4&amp;ilr=4" target="_blank" rel="noopener noreferrer" onclick="fecharWhatsBanner()" class="whats-button">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+      <span>PARTICIPAR DO GRUPO</span>
+    </a>
+    <div class="whats-rodape">✅ Grupo gratuito • Entre agora!</div>
+  </div>
+
+  <script>
+  (function () {
+    // --- SUPORTE ---
+    var sheet = document.getElementById('supportSheet');
+    var handle = document.getElementById('supportHandle');
+    var startY = null;
+
+    function setSupportOpen(open) {
+      sheet.classList.toggle('open', open);
+      handle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      sheet.setAttribute('aria-hidden', open ? 'false' : 'true');
+      var arrow = handle.querySelector('.arrow');
+      if (arrow) arrow.textContent = open ? '\u25BC' : '\u25B2';
+    }
+    function toggleSupport() {
+      setSupportOpen(!sheet.classList.contains('open'));
+    }
+    handle.addEventListener('click', toggleSupport);
+    handle.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleSupport(); }
+      if (e.key === 'Escape') setSupportOpen(false);
+    });
+    handle.addEventListener('touchstart', function (e) {
+      if (e.touches && e.touches.length) startY = e.touches[0].clientY;
+    }, { passive: true });
+    handle.addEventListener('touchend', function (e) {
+      if (startY === null || !e.changedTouches || !e.changedTouches.length) return;
+      var d = e.changedTouches[0].clientY - startY;
+      if (d < -12) setSupportOpen(true);
+      else if (d > 12) setSupportOpen(false);
+      startY = null;
+    }, { passive: true });
+
+    // --- MENU BANCAS ---
+    var menu = document.getElementById('menu-hamburguer');
+    var botoes = document.getElementById('botoes-container');
+    function toggleMenu() {
+      var aberto = menu.classList.toggle('open');
+      botoes.classList.toggle('open', aberto);
+    }
+    menu.addEventListener('click', function (e) {
+      e.stopPropagation();
+      toggleMenu();
+    });
+    menu.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleMenu(); }
+    });
+
+    // Links das bancas
+    document.getElementById('botao-bola').addEventListener('click', function () {
+      window.location.href = 'https://www.brasileirao.site';
+    });
+    document.getElementById('botao-tigerclub').addEventListener('click', function () {
+      window.open('https://WWW.TIGERSCLUB.NET', '_blank');
+    });
+    document.getElementById('botao-feiticeira').addEventListener('click', function () {
+      window.open('https://www.feiticeiravip.com.br', '_blank');
+    });
+    document.getElementById('botao-acertos').addEventListener('click', function () {
+      window.open('https://app.acertos.online/pr/sbrqjugZ', '_blank');
+    });
+    document.getElementById('botao-brasil').addEventListener('click', function () {
+      window.open('https://www.bancabrasileira.net', '_blank');
+    });
+    document.getElementById('whatzap').addEventListener('click', function () {
+      window.open('https://www.salvadorloterias.com', '_blank');
+    });
+  })();
+  </script>
+
+  <script>
   let deferredPrompt;
-
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     deferredPrompt = e;
     const banner = document.getElementById('install-banner');
     if (banner) banner.style.display = 'block';
   });
-
   function instalarApp() {
     if (deferredPrompt) {
       deferredPrompt.prompt();
-      deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === 'accepted') {
-          console.log('Usuário aceitou instalar o app');
-        } else {
-          console.log('Usuário recusou instalar o app');
-        }
+      deferredPrompt.userChoice.then(() => {
         deferredPrompt = null;
         document.getElementById('install-banner').style.display = 'none';
       });
     }
   }
+  </script>
 
-  // Carregamento assíncrono do iframe principal
-  window.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('embeddedIframe').src = "https://app.acertos.club/pr/qcGoRMK0";
-  });
-</script>
-
-
-<!-- Banner TigerClub - Mostra 1x por dia -->
-<style>
-  #tiger-banner {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 10px;
-    border-radius: 12px;
-    max-width: 90vw;
-  }
-
-  #tiger-banner img {
-    width: 70vw;
-    max-width: 500px;
-    height: auto;
-    cursor: pointer;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
-  }
-
-  #close-tiger-banner {
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    background: #ff4444;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 18px;
-    line-height: 30px;
-  }
-</style>
-
-<div id="tiger-banner">
-  <button id="close-tiger-banner">&times;</button>
-  <a href="https://app.superacertos.club/pr/DiNatQPp" target="_blank">
-    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJsia9fV48VQtpMvb39dsm1j7NTzvlYw7Q0-K3nnTn4UXH_OKv6QZ28y6pA4eIp4CIBmFTwkX-ZZ26W65Upll8X4EE2gaHXVw4ryex-zYgFJqF7cGkMfLKJcgbyy3yTJu4D2p_Lv-FA0YSVMSf-jNDTd5FhSpsY29_y78D7AsFYqLtbq2Sa_EFW47x9H3a/s1024/1781963515978.png" alt="Promoção Tiger Club" />
-  </a>
-</div>
-
-<script>
+  <script>
   window.addEventListener('load', function () {
     const lastShown = localStorage.getItem('tigerBannerLastShown');
     const now = new Date().getTime();
-    const oneDay = 24 * 60 * 60 * 1000; // 24 horas em ms
-
+    const oneDay = 24 * 60 * 60 * 1000;
     if (!lastShown || now - lastShown > oneDay) {
-      // Espera 5 segundos para mostrar
       setTimeout(() => {
-        document.getElementById("tiger-banner").style.display = "block";
-        // Atualiza a data de exibição
+        document.getElementById('tiger-banner').style.display = 'block';
         localStorage.setItem('tigerBannerLastShown', now.toString());
       }, 5000);
     }
-
-    document.getElementById("close-tiger-banner").onclick = function () {
-      document.getElementById("tiger-banner").style.display = "none";
+    document.getElementById('close-tiger-banner').onclick = function () {
+      document.getElementById('tiger-banner').style.display = 'none';
     };
   });
-</script>
+  </script>
 
-
-
-
-
-<!-- BANNER WHATSAPP - GRUPO DE PALPITES -->
-
-<!-- ========================================= -->
-
-<div id="whats-banner">
-
-  <!-- BOTÃO FECHAR -->
-
-<button
-onclick="fecharWhatsBanner()"
-class="whats-fechar"
-aria-label="Fechar banner"
-
->
-
-×
-
-
-  </button>
-
-  <!-- ÍCONE WHATSAPP -->
-
-  <div class="whats-icon-top">
-    <img
-      src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-      alt="WhatsApp"
-    >
-  </div>
-
-  <!-- TÍTULO -->
-
-  <h2>🔥 ENTRE NO GRUPO DE PALPITES!</h2>
-
-  <p>
-    Receba palpites, informações e novidades<br>
-    diretamente no seu WhatsApp.
-  </p>
-
-  <!-- BOTÃO WHATSAPP -->
-
-<a
-href="https://chat.whatsapp.com/KokcnW2aftNGVBjdELZRZK?s=cl&p=a&mlu=4&ilr=4"
-target="_blank"
-rel="noopener noreferrer"
-onclick="fecharWhatsBanner()"
-class="whats-button"
-
->
-
-```
-<img
-  src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-  alt="WhatsApp"
->
-
-<span>
-  PARTICIPAR DO GRUPO
-</span>
-```
-
-  </a>
-
-  <!-- RODAPÉ -->
-
-  <div class="whats-rodape">
-    ✅ Grupo gratuito • Entre agora!
-  </div>
-
-</div>
-
-<style>
-
-/* ========================================= */
-/* BANNER */
-/* ========================================= */
-
-#whats-banner {
-
-  position: fixed;
-
-  top: 50%;
-  left: 50%;
-
-  transform: translate(-50%, -50%);
-
-  width: 380px;
-  max-width: calc(100% - 30px);
-
-  padding: 35px 25px 28px;
-
-  background:
-    radial-gradient(
-      circle at top,
-      #123c28 0%,
-      #111 45%,
-      #080808 100%
-    );
-
-  border: 2px solid #25D366;
-
-  border-radius: 22px;
-
-  text-align: center;
-
-  font-family: Arial, sans-serif;
-
-  z-index: 999999;
-
-  box-shadow:
-    0 0 15px rgba(37,211,102,.7),
-    0 0 40px rgba(37,211,102,.4),
-    0 15px 50px rgba(0,0,0,.8);
-
-  animation:
-    bannerEntrada .5s ease,
-    bannerBrilho 2s infinite;
-
-}
-
-
-/* ========================================= */
-/* ANIMAÇÃO DE ENTRADA */
-/* ========================================= */
-
-@keyframes bannerEntrada {
-
-  from {
-
-    opacity: 0;
-
-    transform:
-      translate(-50%, -45%)
-      scale(.8);
-
+  <script>
+  function fecharWhatsBanner() {
+    const banner = document.getElementById('whats-banner');
+    if (!banner) return;
+    banner.classList.add('whats-banner-fechando');
+    setTimeout(function () { banner.remove(); }, 250);
   }
-
-  to {
-
-    opacity: 1;
-
-    transform:
-      translate(-50%, -50%)
-      scale(1);
-
-  }
-
-}
-
-
-/* ========================================= */
-/* ANIMAÇÃO DE BRILHO */
-/* ========================================= */
-
-@keyframes bannerBrilho {
-
-  0%, 100% {
-
-    box-shadow:
-      0 0 15px rgba(37,211,102,.6),
-      0 0 40px rgba(37,211,102,.3),
-      0 15px 50px rgba(0,0,0,.8);
-
-  }
-
-  50% {
-
-    box-shadow:
-      0 0 25px rgba(37,211,102,1),
-      0 0 60px rgba(37,211,102,.55),
-      0 15px 50px rgba(0,0,0,.8);
-
-  }
-
-}
-
-
-/* ========================================= */
-/* BOTÃO FECHAR */
-/* ========================================= */
-
-.whats-fechar {
-
-  position: absolute;
-
-  top: 10px;
-  right: 10px;
-
-  width: 35px;
-  height: 35px;
-
-  border: 0;
-
-  border-radius: 50%;
-
-  background: #ff1744;
-
-  color: #fff;
-
-  font-size: 25px;
-
-  font-weight: bold;
-
-  line-height: 35px;
-
-  cursor: pointer;
-
-  box-shadow:
-    0 0 12px rgba(255,23,68,.6);
-
-  transition: .2s;
-
-}
-
-.whats-fechar:hover {
-
-  transform: scale(1.12);
-
-  background: #ff0033;
-
-}
-
-
-/* ========================================= */
-/* ÍCONE SUPERIOR */
-/* ========================================= */
-
-.whats-icon-top {
-
-  width: 75px;
-  height: 75px;
-
-  margin: 0 auto 12px;
-
-  border-radius: 50%;
-
-  background: #25D366;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  box-shadow:
-    0 0 15px #25D366,
-    0 0 35px rgba(37,211,102,.6);
-
-  animation: iconPulse 1.5s infinite;
-
-}
-
-
-.whats-icon-top img {
-
-  width: 48px;
-  height: 48px;
-
-}
-
-
-/* ========================================= */
-/* PULSO DO ÍCONE */
-/* ========================================= */
-
-@keyframes iconPulse {
-
-  0%, 100% {
-
-    transform: scale(1);
-
-  }
-
-  50% {
-
-    transform: scale(1.08);
-
-  }
-
-}
-
-
-/* ========================================= */
-/* TÍTULO */
-/* ========================================= */
-
-#whats-banner h2 {
-
-  margin: 8px 0 10px;
-
-  color: #25D366;
-
-  font-size: 23px;
-
-  font-weight: 900;
-
-  font-family: Arial, sans-serif;
-
-  text-shadow:
-    0 0 8px rgba(37,211,102,.8);
-
-}
-
-
-/* ========================================= */
-/* TEXTO */
-/* ========================================= */
-
-#whats-banner p {
-
-  margin: 0;
-
-  color: #ddd;
-
-  font-size: 14px;
-
-  line-height: 1.5;
-
-}
-
-
-/* ========================================= */
-/* BOTÃO WHATSAPP */
-/* ========================================= */
-
-.whats-button {
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  gap: 10px;
-
-  width: 100%;
-
-  box-sizing: border-box;
-
-  margin-top: 20px;
-
-  padding: 16px 15px;
-
-  background:
-    linear-gradient(
-      45deg,
-      #00c853,
-      #25D366,
-      #00e676
-    );
-
-  color: #fff;
-
-  border-radius: 14px;
-
-  text-decoration: none;
-
-  font-size: 17px;
-
-  font-weight: 900;
-
-  letter-spacing: .3px;
-
-  box-shadow:
-    0 5px 20px rgba(37,211,102,.5);
-
-  animation: buttonPulse 1.8s infinite;
-
-  transition: .2s;
-
-}
-
-
-.whats-button img {
-
-  width: 30px;
-  height: 30px;
-
-}
-
-
-.whats-button:hover {
-
-  transform: scale(1.04);
-
-  box-shadow:
-    0 0 20px rgba(37,211,102,1),
-    0 0 40px rgba(37,211,102,.5);
-
-}
-
-
-/* ========================================= */
-/* PULSO DO BOTÃO */
-/* ========================================= */
-
-@keyframes buttonPulse {
-
-  0%, 100% {
-
-    transform: scale(1);
-
-  }
-
-  50% {
-
-    transform: scale(1.025);
-
-  }
-
-}
-
-
-/* ========================================= */
-/* RODAPÉ */
-/* ========================================= */
-
-.whats-rodape {
-
-  margin-top: 14px;
-
-  color: #25D366;
-
-  font-size: 12px;
-
-  font-weight: bold;
-
-}
-
-
-/* ========================================= */
-/* CELULAR */
-/* ========================================= */
-
-@media (max-width: 480px) {
-
-  #whats-banner {
-
-    width: 330px;
-
-    padding: 30px 20px 23px;
-
-  }
-
-  #whats-banner h2 {
-
-    font-size: 20px;
-
-  }
-
-  #whats-banner p {
-
-    font-size: 13px;
-
-  }
-
-  .whats-button {
-
-    font-size: 15px;
-
-    padding: 15px 10px;
-
-  }
-
-}
-
-
-/* ========================================= */
-/* ANIMAÇÃO DE SAÍDA */
-/* ========================================= */
-
-.whats-banner-fechando {
-
-  opacity: 0 !important;
-
-  transform:
-    translate(-50%, -50%)
-    scale(.8) !important;
-
-  transition: .25s ease;
-
-}
-
-</style>
-
-<script>
-
-/* ========================================= */
-/* FECHAR BANNER */
-/* ========================================= */
-
-function fecharWhatsBanner() {
-
-  const banner =
-    document.getElementById("whats-banner");
-
-  if (!banner) return;
-
-  banner.classList.add(
-    "whats-banner-fechando"
-  );
-
-  setTimeout(function() {
-
-    banner.remove();
-
-  }, 250);
-
-}
-
-</script>
-
-    
-    
+  </script>
 </body>
 </html>
-
-
-
